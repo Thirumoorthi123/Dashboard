@@ -1,0 +1,26 @@
+.test
+{
+    float: left;
+    width: 100%;
+}
+.test ul li 
+{
+    float: left;
+    padding: 4px 45px;
+}
+
+.test ul  li a
+{
+    float: left;
+    width: 100%;
+    color: darkgoldenrod;
+}
+.social
+{
+    font-size:30px;
+
+}
+.social a{
+    align-content: center;
+    padding: 20px;
+}

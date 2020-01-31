@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/stylesheets/signup.css'/>
+    </head>
+<div class="main">
+<section class="login-block ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 login-sec">
+                <h2 class="text-center">Signup Now</h2>
+                 <p>Please fill in this form to create an account.</p>
+                <form class="login-form"action="/signup" method="POST">
+                 {{#if errors}}
+                        {{#each messages}}
+                        <div class="alert alert-danger" role="alert">
+                            {{this}}
+                        </div>
+                        {{/each}}
+                    {{/if}}
+                    {{#if success}}
+                    <div class="alert alert-success" role="alert">
+                            Thank you for creating the account to us.
+                        </div>
+                    {{/if}}
+                    <div class="form-group">
+                        <label for="Name" class="text-uppercase">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your Name"required value="{{email}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="text-uppercase">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your Email"required value="{{email}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Password</label>
+                        <input type="password" name="password" id="txtPassword" class="form-control" placeholder="Enter your password"required value="{{password}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="text-uppercase">Repeat Password</label>
+                        <input type="password" name="repeatpassword" id ="txtConfirmPassword" class="form-control" placeholder="Enter your password again"required value="{{repeatpassword}}">
+                    </div>
+
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            <medium>Remember Me</medium>
+                        </label>
+                        <a href="/signin">Sign-in</a>
+
+                        <button type="submit" class="btn btn-login float-right" id="btnSubmit">Submit</button>
+                        <p class="mt-5 mb-3 text-muted">&copy;Thirumoorthi,2020</p>
+                    </div>    
+                </form>
+                <div class="copy-text">Created with <i class="fa fa-heart"></i> by Thirumoorthi</div>
+            </div>
+            <div class="col-md-8 banner-sec">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" style="height: 100%;" src="https://damore-mckim.northeastern.edu/wp-content/uploads/2019/03/laptop-signup-1680x705.jpg" style="heigh:auto;">
+                            <div class="carousel-caption d-none d-md-block">
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+</div>
+</html>

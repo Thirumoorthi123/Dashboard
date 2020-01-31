@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* contact page */
+.side-links ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+.side-links ul li, .side-links ul li a{
+	color: #111111;
+}
+.breadcrumb{
+	background-color: transparent !important;
+}
+.side-pic{
+	border-radius: 40px;
+	box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+.sidebar{
+	margin-bottom: 30px;
+}
+/* projets */
+.grid {
+	position: relative;
+	clear: both;
+}
+
+/* Newsletter */
+.intro-header {
+	color: #f8f8f8;
+	text-align: center;
+}
+
+.container{
+margin-top:150px;
+background-color:#00bfff;
+width:100%;
+position:absolute;
+height:220px;
+}
+.custom-tab-content{
+color:#fff;
+font-family: 'Open Sans', sans-serif;
+}

@@ -1,0 +1,24 @@
+ <div class="row" style="padding: 8px;">
+        <div class="col-md-8">
+            <h1>List of Contacters</h1>
+        </div>
+         
+  </div>       
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Description</th>
+            </tr>
+            
+            {{#each contact}}
+            <tr>
+                  <td> {{name}}</td>
+                  <td> {{email}}</td>
+                  <td> {{mobile}}</td>
+                  <td> {{description}}</td>
+            </tr>      
+            {{/each}}
+        </table>    
+

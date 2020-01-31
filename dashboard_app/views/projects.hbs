@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row" style="padding: 8px;">
+        <div class="col-md-8">
+            <h1>List of projects</h1>
+        </div>
+        <div class="col-md-4 text-right">
+          <a href="/createproject/" class="btn btn-success">Create New</a><br>
+
+        </div>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Tittle</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            {{#each projects}}
+            <tr>
+                <td><img src="{{image}}" width="60" height="60"></td>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>
+                    <a href="/projects/{{_id}}" style="font-size: lager;">Details</a><br>
+                    <a href="/projects/{{_id}}/delete" style="font-size: large;">Delete</a>
+
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>    
+</div>
+<hr>
+

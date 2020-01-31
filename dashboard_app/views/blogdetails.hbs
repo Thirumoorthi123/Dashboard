@@ -1,0 +1,26 @@
+<div class="container" style="padding-bottom: 6px;">
+    {{#if success}}
+      <p class="alert-success">Project updated successfully...</p>
+    {{/if}}
+    <h2>Blog Details</h2>
+    <hr>
+    <form action="/blog/{{data._id}}" method="POST">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="title">Title :</label>
+                <input type="text" name="title"id="title" placeholder="your project title" value="{{data.title}}">
+            </div><br>
+            <div class="form-group col-md-6">
+                <label for="image">Imgae :</label>
+                <input type="text" name="image" id="image" placeholder=" your image url"value="{{data.image}}"><input type="file" name="pic" accept="image/*">
+            </div>
+        </div>
+        
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" name="descfription" placeholder="description" rows="5">{{data.description}}</textarea>
+            </div>
+        
+        <button type="submit" class="btn btn-primary">update</button>
+    </form>
+</div>

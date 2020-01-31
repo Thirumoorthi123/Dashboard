@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark ">
+  <a class="navbar-brand" href="#">THIRUMOORTHI</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto"> 
+      <li class="nav-item {{#if indexNav}}active{{/if}}">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {{#if projectsNav}}active{{/if}}">
+        <a class="nav-link" href="/projects">Projects</a>
+      </li>
+      <li class="nav-item {{#if blogNav}}active{{/if}}">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+      <li class="nav-item {{#if aboutNav}}active{{/if}}">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      <li class="nav-item {{#if contactNav}}active{{/if}}">
+        <a class="nav-link" href="contact">Contact</a>
+      </li>      
+    </ul>    
+  </div>
+</nav>

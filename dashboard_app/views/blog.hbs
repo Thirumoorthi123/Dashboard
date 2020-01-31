@@ -1,0 +1,66 @@
+{{!-- <div class="container">
+    <h1 class="title"></h1>
+	<nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item bc-item"><a href="/">Dashboard</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Blog</li>
+                </ol>
+            </nav>
+    {{{extraHtml}}}
+    <div class="row">
+        <!-- list of blogs -->
+        <!-- Loop through the data and create the divs -->
+        {{#each post}}
+            <div class="col-md-4">				
+				<div class="grid">                    
+					<figure class="effect-julia" > 
+						<img src="{{image}}" width="70" height="70" class="img-responsive" alt="{{title}}">
+						<figcaption>
+							<h5>{{title}}</h5>
+							<div>
+								<h6>{{description}}</h6>
+							</div>
+							<a href="/blog/{{_id}}" class="btn btn-primary">Details</a>
+                            <a href="/blog/{{_id}}" class="btn btn-primary">Update</a>
+                             <a href="/blog/{{_id}}" class="btn btn-primary">Delete</a>
+                        </figcaption>			
+					</figure>
+				</div>
+			</div>
+        {{/each}}
+    </div>
+</div> --}}
+
+
+<div class="container">
+    <div class="row" style="padding: 8px;">
+        <div class="col-md-8">
+            <h1>List of Blog</h1>
+        </div>
+        <div class="col-md-4 text-right">
+          <a href="/createblog/" class="btn btn-success">Create New</a><br>
+
+        </div>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Tittle</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            {{#each post}}
+            <tr>
+                <td><img src="{{image}}" width="60" height="60"></td>
+                <td>{{title}}</td>
+                <td>{{description}}</td>
+                <td>
+                    <a href="/blog/{{_id}}" style="font-size: lager;">Details</a><br>
+                    <a href="/blog/{{_id}}/delete" style="font-size: large;">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>    
+</div>
+<hr> 
+
