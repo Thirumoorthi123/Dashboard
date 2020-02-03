@@ -8,12 +8,12 @@ var url = "mongodb://localhost:27017/";
 var hbs = require('express-handlebars');
 let userloggedin=false;
 
-let users = [
-     { email:'teertha12@gmail.com',password :'12345', name:'Teertha'},
-     { email:'ajay34@gmail.com',password :'12345', name:'Ajay'},
-     { email:'moorthu78@gmail.com',password :'12345', name:'Moorthi'},
+// let users = [
+//      { email:'teertha12@gmail.com',password :'12345', name:'Teertha'},
+//      { email:'ajay34@gmail.com',password :'12345', name:'Ajay'},
+//      { email:'moorthu78@gmail.com',password :'12345', name:'Moorthi'},
 
-]
+// ]
 
 
 /* GET home page. */
@@ -68,7 +68,7 @@ function (req, res) {
 
     MongoClient.connect(url, {useUnifiedTopology: true},function (err, db) {
       if (err) throw err;
-      var dbo = db.db('dashboard');
+      var dbo = db.db('portfolio');
       dbo.collection('Signup').findOne({email: email}, function (err, data) {
         console.log("find one Id =",data);
         if(data.email == email && data.password == password) {
@@ -131,7 +131,7 @@ router.post('/signup',[
       let repeatpassword = req.body.repeatpassword;
       MongoClient.connect(url, function (err, db) {
         if (err) throw err;
-        var dbo = db.db('dashboard');
+        var dbo = db.db('portfolio');
         let signup = { name,email,password,repeatpassword };
         dbo.collection('Signup').insertOne(signup, function (err, signupObj) {
           if (err) throw err;
