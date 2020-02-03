@@ -8,6 +8,14 @@ var url = "mongodb://localhost:27017/";
 var hbs = require('express-handlebars');
 let userloggedin=false;
 
+let users = [
+     { email:'teertha12@gmail.com',password :'12345', name:'Teertha'},
+     { email:'ajay34@gmail.com',password :'12345', name:'Ajay'},
+     { email:'moorthu78@gmail.com',password :'12345', name:'Moorthi'},
+
+]
+
+
 /* GET home page. */
 router.get('/',function(req,res,next)
 {
